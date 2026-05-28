@@ -16,7 +16,7 @@ Extrair fatos verificados das referências ANTES de escrever, criando um registr
 
 - **Após** coletar referências (pesquisa-academica ou pipeline)
 - **Antes** de escrever qualquer seção que cite dados das refs
-- Etapa 1.5 do workflow em ~/escrita/CLAUDE.md (entre Pesquisa e Rascunho)
+- Etapa 1.5 do workflow em ~/bin/escrita-tooling/CLAUDE.md (entre Pesquisa e Rascunho)
 
 
 ## Pré-requisitos
@@ -184,6 +184,6 @@ Todos ficam na pasta do projeto (ex: `Livro Editora Atheneu/`).
 
 ## Referências
 
-- verify-claims (camada corretiva): `~/escrita/skills/pesquisa-academica/verify-claims.md`
-- Código: `~/escrita/tools/extract_facts.py`
+- verify-claims (camada corretiva): `~/bin/escrita-tooling/skills/pesquisa-academica/verify-claims.md`
+- Código: `~/bin/escrita-tooling/tools/extract_facts.py`
 - CLI: `python -m tools extract-facts|facts-import|facts-status|facts-report|facts-crosscheck`

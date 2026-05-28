@@ -1,11 +1,11 @@
 ---
 name: revisao-literatura
-description: "Modalidades de revisão de literatura como produto final: integrativa, sistemática e de escopo. A revisão É o texto sendo produzido. Usa o pipeline automatizado em ~/escrita/tools/."
+description: "Modalidades de revisão de literatura como produto final: integrativa, sistemática e de escopo. A revisão É o texto sendo produzido. Usa o pipeline automatizado em ~/bin/escrita-tooling/tools/."
 status: ativa
 version: 2.0
 criada: 2026-02-18
 atualizada: 2026-02-18
-baseda-em: ~/escrita/Livro Editora Atheneu/relatorio-audit-deep-research.md
+baseda-em: ~/PKM/Escrita/Livro Editora Atheneu/relatorio-audit-deep-research.md
 ---
 
 # Revisão de Literatura — Pipeline Validado
@@ -26,12 +26,12 @@ Conduzir revisão de literatura como **produto final** (o artigo de revisão É 
 
 **Quando usar pesquisa-academica:** quando a revisão é intermediária (capítulo, artigo original, material didático).
 
-**Fundamentação metodológica:** `~/escrita/Pesquisas sobre Pipeline/revisao-metodologica-tipos-de-revisao.md`
+**Fundamentação metodológica:** `~/PKM/Escrita/Pesquisas sobre Pipeline/revisao-metodologica-tipos-de-revisao.md`
 
 
 ## Pipeline automatizado
 
-A partir da v2.0, esta skill é orquestrada pelo pipeline em `~/escrita/tools/`.
+A partir da v2.0, esta skill é orquestrada pelo pipeline em `~/bin/escrita-tooling/tools/`.
 
 ```bash
 # Revisão integrativa
@@ -47,7 +47,7 @@ python -m tools scope "Projeto" --init --modality revisao-escopo
 python -m tools run "Projeto" --modality revisao-escopo
 ```
 
-**Documentação completa:** `~/escrita/tools/README.md`
+**Documentação completa:** `~/bin/escrita-tooling/tools/README.md`
 
 O pipeline automatiza busca, deduplicação, verificação, classificação, triagem e geração de .bib/relatório. As diferenças entre subtipos (profundidade, documentação, avaliação de qualidade) são configuradas automaticamente pela modalidade.
 
@@ -238,7 +238,7 @@ Use este critério ao triagear referências geradas por IA:
 
 ## 4. Sobre as ferramentas de IA — resumo empírico
 
-Baseado na auditoria de 288 referências (2026-02-18). Relatório completo: `~/escrita/Livro Editora Atheneu/relatorio-audit-deep-research.md`.
+Baseado na auditoria de 288 referências (2026-02-18). Relatório completo: `~/PKM/Escrita/Livro Editora Atheneu/relatorio-audit-deep-research.md`.
 
 | Ferramenta | Melhor uso | Pior uso | Risco |
 |---|---|---|---|
@@ -268,6 +268,6 @@ Baseado na auditoria de 288 referências (2026-02-18). Relatório completo: `~/e
 
 ## Referências desta skill
 
-- Relatório de auditoria: `~/escrita/Livro Editora Atheneu/relatorio-audit-deep-research.md`
-- Skill complementar: `~/escrita/skills/referencias-e-citacoes/SKILL.md`
-- Script de verificação reutilizável: `~/escrita/Livro Editora Atheneu/scripts/check_refs.py`
+- Relatório de auditoria: `~/PKM/Escrita/Livro Editora Atheneu/relatorio-audit-deep-research.md`
+- Skill complementar: `~/bin/escrita-tooling/skills/referencias-e-citacoes/SKILL.md`
+- Script de verificação reutilizável: `~/PKM/Escrita/Livro Editora Atheneu/scripts/check_refs.py`

@@ -1,6 +1,6 @@
 ---
 name: pesquisa-academica
-description: "Modalidade pesquisa-base: montar base de referências verificadas para subsidiar escrita (capítulo, artigo, texto didático). Produto intermediário, não final. Usa o pipeline automatizado em ~/escrita/tools/."
+description: "Modalidade pesquisa-base: montar base de referências verificadas para subsidiar escrita (capítulo, artigo, texto didático). Produto intermediário, não final. Usa o pipeline automatizado em ~/bin/escrita-tooling/tools/."
 status: ativa
 version: 2.1
 date: 2026-02-19
@@ -29,7 +29,7 @@ Codificar um workflow padronizado de pesquisa de literatura que seja:
 
 ## Pipeline automatizado
 
-A partir da v2.0, esta skill é orquestrada pelo pipeline em `~/escrita/tools/`.
+A partir da v2.0, esta skill é orquestrada pelo pipeline em `~/bin/escrita-tooling/tools/`.
 
 ```bash
 # 1. Criar scope.yaml para o projeto
@@ -55,7 +55,7 @@ python -m tools extract-manual "Projeto"
 # (via Claude Code interativo — /enrich-refs)
 ```
 
-**Documentação completa:** `~/escrita/tools/README.md`
+**Documentação completa:** `~/bin/escrita-tooling/tools/README.md`
 
 O pipeline automatiza as etapas 2-6 abaixo. As etapas 1 (delimitação humana) e os prompts de IA assistida permanecem como instruções nesta skill.
 
@@ -380,7 +380,7 @@ Se a distribuição final tiver < 50% de T1, voltar à Trilha A e buscar mais ar
 
 ## 5. Etapa 4 — Verificação individual
 
-Executar o **Checklist 3.1** da skill `referencias-e-citacoes` (~/escrita/skills/referencias-e-citacoes/SKILL.md) para cada referência que passou pela triagem.
+Executar o **Checklist 3.1** da skill `referencias-e-citacoes` (~/bin/escrita-tooling/skills/referencias-e-citacoes/SKILL.md) para cada referência que passou pela triagem.
 
 ### 5.1 Checklist resumido (referência cruzada)
 
@@ -406,7 +406,7 @@ Para qualquer afirmação com número específico (ex: "redução de 40%", "merc
 
 ### 5.3 Verificação reforçada para referências sugeridas por IA
 
-Protocolo completo documentado em `~/escrita/skills/referencias-e-citacoes/SKILL.md`, seção 3.2.
+Protocolo completo documentado em `~/bin/escrita-tooling/skills/referencias-e-citacoes/SKILL.md`, seção 3.2.
 
 Resumo: verificar existência via DOI → confirmar autores no site do periódico → conferir metadados → localizar dados quantitativos na fonte.
 
@@ -628,7 +628,7 @@ Validados pela auditoria de 251 referências (Cap. 16 Atheneu, 2026-02-18):
 
 Após coletar referências (Etapas 2-6) e antes de escrever, usar o `/extract-facts` para extrair fatos verificados das refs para o Facts Registry. Isso previne erros de dados fabricados, valores incorretos e derivações matemáticas erradas.
 
-**Skill completa:** `~/escrita/skills/pesquisa-academica/extract-facts.md`
+**Skill completa:** `~/bin/escrita-tooling/skills/pesquisa-academica/extract-facts.md`
 
 **Uso rápido:**
 ```bash

@@ -34,7 +34,7 @@ Automatizar a configuração de um novo projeto de escrita. Em vez de montar man
 ## Saída esperada
 
 ```
-~/escrita/[Nome do Projeto]/
+~/PKM/Escrita/[Nome do Projeto]/
 ├── SKILL.md              ← gerada pelo questionário
 ├── [texto].md            ← arquivo canônico do texto (vazio, com cabeçalho)
 ├── notas_pesquisa.md     ← arquivo para dados brutos
