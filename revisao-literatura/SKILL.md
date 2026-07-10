@@ -5,7 +5,7 @@ status: ativa
 version: 2.0
 criada: 2026-02-18
 atualizada: 2026-02-18
-baseda-em: ~/PKM/Escrita/Livro Editora Atheneu/relatorio-audit-deep-research.md
+baseda-em: ~/PKM/Escrita/Livro Editora Atheneu/Deep Researches (Antigas)/relatorio-audit-deep-research.md
 ---
 
 # Revisão de Literatura — Pipeline Validado
@@ -228,7 +228,9 @@ Use este critério ao triagear referências geradas por IA:
 | 1 | Tangencial — saúde digital, regulação, mas não o foco específico |
 | 0 | Off-topic — descartar |
 
-### Keywords para gestão de saúde digital (Capítulo 16)
+### Keywords para gestão de saúde digital (EXEMPLO histórico — Capítulo 16 Atheneu)
+
+> **Nota:** as listas abaixo são o exemplo concreto que calibrou a skill (Cap. 16). Para qualquer outro projeto, as keywords vivem no `scope.yaml` do projeto (`relevance_keywords` + `exclusion_keywords`) — não reutilizar estas.
 
 **Score 2 (incluir):** big data, machine learning, gestão hospitalar, hospital management, saúde suplementar, operadora, leito, bed management, patient flow, fraude, fraud detection, auditoria médica, supply chain, cadeia de suprimentos, people analytics, no-show, value-based, custo, eficiência, DATASUS, SUS, ANS, RNDS, FHIR, TISS, prontuário eletrônico, interoperabilidade, LGPD, saúde digital, transformação digital, analytics, data lake, maturidade digital.
 
@@ -238,7 +240,7 @@ Use este critério ao triagear referências geradas por IA:
 
 ## 4. Sobre as ferramentas de IA — resumo empírico
 
-Baseado na auditoria de 288 referências (2026-02-18). Relatório completo: `~/PKM/Escrita/Livro Editora Atheneu/relatorio-audit-deep-research.md`.
+Baseado na auditoria de 288 referências (2026-02-18). Relatório completo: `~/PKM/Escrita/Livro Editora Atheneu/Deep Researches (Antigas)/relatorio-audit-deep-research.md`.
 
 | Ferramenta | Melhor uso | Pior uso | Risco |
 |---|---|---|---|
@@ -268,6 +270,6 @@ Baseado na auditoria de 288 referências (2026-02-18). Relatório completo: `~/P
 
 ## Referências desta skill
 
-- Relatório de auditoria: `~/PKM/Escrita/Livro Editora Atheneu/relatorio-audit-deep-research.md`
+- Relatório de auditoria: `~/PKM/Escrita/Livro Editora Atheneu/Deep Researches (Antigas)/relatorio-audit-deep-research.md`
 - Skill complementar: `~/bin/escrita-tooling/skills/referencias-e-citacoes/SKILL.md`
-- Script de verificação reutilizável: `~/PKM/Escrita/Livro Editora Atheneu/scripts/check_refs.py`
+- Verificação de referências: `python -m tools verify` / `verify-refs` (o antigo `check_refs.py` foi absorvido pelo pipeline — ver `tools/DECISOES.md` T1/T8)
