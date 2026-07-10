@@ -67,6 +67,8 @@ O pipeline automatiza busca, deduplicação, verificação, classificação, tri
 
 \* BVS (LILACS + SciELO + MEDLINE federados) requer `BVS_API_KEY` — chave gratuita em https://api.bvsalud.org.
 
+**Camada semântica (Fase 3, opcional):** `semantic_rerank: true` no scope.yaml ativa re-ranqueamento por embeddings (Ollama local, bge-m3) + **resgate semântico** — referências que as keywords não capturaram (sinônimos imprevistos) mas semanticamente próximas da pergunta são promovidas para revisão humana em vez de descartadas. Standalone: `python -m tools semantic "Projeto"`.
+
 
 ## 1. Pipeline de 6 etapas (instruções humanas)
 

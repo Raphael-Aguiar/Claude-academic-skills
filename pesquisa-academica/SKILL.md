@@ -653,4 +653,4 @@ python -m tools facts-status "Projeto" --section 16.3   # Brief para escrita
 - [ ] Integração com Index (acervo na VPS) para buscar materiais já no acervo pessoal
 - [ ] Template de fichamento por artigo (para revisões mais extensas)
 - [ ] Integração com Zotero via Better BibTeX
-- [ ] Busca semântica vetorial (expansão de query + re-ranqueamento por embeddings) — Fase 3
+- [x] ~~Busca semântica vetorial~~ (Fase 3, 2026-07-10: re-ranqueamento + resgate semântico via Ollama/bge-m3 — `python -m tools semantic` ou `semantic_rerank: true` no scope)
