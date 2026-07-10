@@ -639,11 +639,18 @@ python -m tools facts-status "Projeto" --section 16.3   # Brief para escrita
 ```
 
 
+## 11.6 Triagem semântica e descritores (Fase 2, 2026-07-10)
+
+- **Descritores MeSH/DeCS**: `python -m tools descriptors "Projeto"` sugere descritores oficiais (API MeSH da NLM) para os termos livres do scope.yaml → `pipeline/descriptors-suggested.md` com bloco YAML pronto. DeCS aceita o rótulo MeSH em inglês no campo `mh:` da BVS; traduções em decs.bvsalud.org.
+- **Triagem semântica (dupla triagem)**: os critérios de inclusão/exclusão em prosa são aplicados por revisor LLM — `screen-export` → Claude julga cada ref → `screen-import` (kappa de Cohen keyword×LLM + divergências em `screening-report.md`) → `run --from-stage 5`. Divergência nunca descarta silenciosamente; decide o revisor humano.
+- **PRISMA canônico**: `python -m tools prisma "Projeto"` (automático na etapa 9 para revisões).
+
 ## 12. Questões em aberto (roadmap)
 
-- [ ] Integração com Index (~/Index/) para buscar materiais já no acervo pessoal
-- [ ] Script de busca automatizada em PubMed via E-utilities API
+- [x] ~~Script de busca automatizada em PubMed via E-utilities API~~ (implementado no pipeline)
+- [x] ~~Fluxograma PRISMA~~ (exporter prisma_flow, 2026-07-10)
+- [x] ~~Semantic Scholar API~~ (base de busca implementada; fields_of_study configurável)
+- [ ] Integração com Index (acervo na VPS) para buscar materiais já no acervo pessoal
 - [ ] Template de fichamento por artigo (para revisões mais extensas)
 - [ ] Integração com Zotero via Better BibTeX
-- [ ] Fluxograma PRISMA simplificado para revisões narrativas
-- [ ] Avaliar Semantic Scholar API para triagem automatizada (citation count, fields of study, citation intents)
+- [ ] Busca semântica vetorial (expansão de query + re-ranqueamento por embeddings) — Fase 3

@@ -12,13 +12,14 @@ baseda-em: ~/PKM/Escrita/Livro Editora Atheneu/Deep Researches (Antigas)/relator
 
 ## Propósito
 
-Conduzir revisão de literatura como **produto final** (o artigo de revisão É o texto sendo produzido). Três subtipos:
+Conduzir revisão de literatura como **produto final** (o artigo de revisão É o texto sendo produzido). Quatro subtipos:
 
 | Subtipo | Uso | Framework |
 |---|---|---|
 | `revisao-integrativa` | Sintetizar pesquisa sobre um tópico | Whittemore & Knafl (2005) |
 | `revisao-sistematica` | Síntese exaustiva com protocolo rigoroso | Cochrane + PRISMA 2020 |
 | `revisao-escopo` | Mapear extensão e natureza da evidência | Arksey & O'Malley (2005); JBI (Peters et al. 2020) |
+| `meta-revisao` | Umbrella review — sintetizar REVISÕES existentes | JBI umbrella review; PRIOR (Gates et al. 2022); qualidade via AMSTAR-2 |
 
 **Princípio central:** ferramentas de IA são úteis para mapear o terreno, nunca para gerar a lista final de referências.
 
@@ -45,11 +46,26 @@ python -m tools run "Projeto" --modality revisao-sistematica
 # Revisão de escopo
 python -m tools scope "Projeto" --init --modality revisao-escopo
 python -m tools run "Projeto" --modality revisao-escopo
+
+# Meta-revisão (umbrella review — só revisões entram)
+python -m tools scope "Projeto" --init --modality meta-revisao
+python -m tools run "Projeto" --modality meta-revisao
 ```
 
 **Documentação completa:** `~/bin/escrita-tooling/tools/README.md`
 
 O pipeline automatiza busca, deduplicação, verificação, classificação, triagem e geração de .bib/relatório. As diferenças entre subtipos (profundidade, documentação, avaliação de qualidade) são configuradas automaticamente pela modalidade.
+
+### Fluxo completo para revisões (Fase 2, 2026-07-10)
+
+1. `python -m tools descriptors "Projeto"` — sugerir descritores MeSH/DeCS oficiais para os termos livres; curar e colar no scope.yaml.
+2. `python -m tools run "Projeto"` — busca em ≥3 bases (defaults da modalidade: PubMed, OpenAlex, Semantic Scholar, Europe PMC, BVS*), dedup, verificação zero-trust, triagem por keywords.
+3. `python -m tools screen-export "Projeto"` → Claude Code aplica os **critérios de inclusão/exclusão em prosa** a cada ref (revisor 1) → `python -m tools screen-import "Projeto"` (kappa de Cohen + divergências) → `run --from-stage 5`.
+4. Revisor humano (Raphael, revisor 2) decide as divergências em `screening-report.md` e valida `validation-list.md`.
+5. `pipeline/prisma-flow.md` — fluxo PRISMA 2020/PRISMA-ScR/PRIOR gerado automaticamente (Mermaid + contagens por base).
+6. Avaliação de qualidade dos incluídos (manual, framework indicado no audit-report: RoB 2/GRADE, MMAT/CASP, AMSTAR-2 conforme modalidade).
+
+\* BVS (LILACS + SciELO + MEDLINE federados) requer `BVS_API_KEY` — chave gratuita em https://api.bvsalud.org.
 
 
 ## 1. Pipeline de 6 etapas (instruções humanas)
