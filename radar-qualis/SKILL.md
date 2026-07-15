@@ -1,9 +1,10 @@
-# Skill: periodicos-alvo — recomendação de periódicos para submissão
+# Skill: radar-qualis — Radar Qualis (recomendação de periódicos para submissão)
 
 **Versão**: 2.0 (2026-07-14) · **Status**: Ativa
 
-Dado um manuscrito, uma semente do vault ou um tema/abstract, produz uma
-**shortlist ranqueada e justificada de periódicos-alvo** pelo critério
+**Radar Qualis** é o nome do sistema (assim que Raphael o chama). Dado um
+manuscrito, uma semente do vault ou um tema/abstract, produz uma
+**shortlist ranqueada e justificada de periódicos para submissão** pelo critério
 **VIGENTE** da CAPES (ciclo 2025-2028), combinando consolidação Área 22,
 aderência temática, tipo de estudo, APC, open access, tempo até 1ª decisão,
 indexação e uma estimativa qualitativa de chance de aceite. **Todo dado tem
