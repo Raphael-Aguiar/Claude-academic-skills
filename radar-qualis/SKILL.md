@@ -153,8 +153,8 @@ Regras do julgamento:
 python -m tools journals report --finalistas finalistas.json --julgamento julgamento.json -o <destino>
 ```
 
-- Manuscrito de projeto → `~/PKM/Escrita/<Projeto>/pipeline/periodicos-alvo.md`.
-- Semente → subseção `### Periódicos-alvo sugeridos (gerado em AAAA-MM-DD)`
+- Manuscrito de projeto → `~/PKM/Escrita/<Projeto>/pipeline/radar-qualis.md`.
+- Semente → subseção `## Sugestões do Radar Qualis (gerado em AAAA-MM-DD)`
   no CORPO; **sem propriedade de frontmatter nova** (autoria é de Raphael).
 - Pergunta avulsa → chat.
 

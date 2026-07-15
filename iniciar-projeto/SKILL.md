@@ -19,7 +19,7 @@ Aplicar via `AskUserQuestion`, **estritamente uma pergunta por turno** (regra §
 | # | Pergunta | Opções típicas |
 |---|---|---|
 | 1 | Tipo de texto | capítulo de livro / artigo original / revisão de literatura (integrativa, sistemática, de escopo, meta-revisão) / relatório técnico |
-| 2 | Editora ou periódico alvo | texto livre + link para normas de submissão, se houver |
+| 2 | Editora ou periódico pretendido | texto livre + link para normas de submissão, se houver |
 | 3 | Estilo de citação | Vancouver / ABNT / APA |
 | 4 | Escopo | o que incluir e o que **excluir** explicitamente |
 | 5 | Público-alvo | gestores / clínicos / pesquisadores / estudantes / público geral |
