@@ -42,8 +42,8 @@ python -m tools semantic "Projeto"      # opcional: re-ranqueamento + resgate po
 ```
 
 **Fatos do pipeline que não se inferem:**
-- Bases default por modalidade: PubMed, OpenAlex, Semantic Scholar, Europe PMC, **BVS**.
-- **BVS** (LILACS + SciELO + MEDLINE federados) exige `BVS_API_KEY` — chave gratuita em https://api.bvsalud.org.
+- Bases automáticas por modalidade: PubMed, OpenAlex, Semantic Scholar, Europe PMC.
+- **LILACS/SciELO**: a API bibliográfica da BVS é de uso interno da BIREME — **não existe chave pública** (docs.api.bvsalud.org, verificado 2026-07-15). Caminho legítimo: Raphael executa a estratégia de busca em https://pesquisa.bvsalud.org (navegador), exporta RIS, e `python -m tools import-ris "Projeto" arquivo.ris` traz os registros para o pipeline (mesma verificação zero-trust; documentar a string de busca no search-log — exigência PRISMA).
 - **Camada semântica** (`semantic_rerank: true` no scope.yaml): além de re-ranquear, faz **resgate semântico** — refs que as keywords não pegaram (sinônimos imprevistos) mas próximas da pergunta sobem para revisão humana em vez de serem descartadas.
 - Após o pipeline, restam passos **manuais**: o revisor humano (Raphael, revisor 2) decide as divergências em `screening-report.md` e valida `validation-list.md`; a avaliação de qualidade dos incluídos (RoB 2/GRADE, MMAT/CASP, AMSTAR-2 conforme modalidade) é manual, com o framework indicado no audit-report. O `pipeline/prisma-flow.md` (PRISMA 2020/ScR/PRIOR) é gerado automaticamente.
 
