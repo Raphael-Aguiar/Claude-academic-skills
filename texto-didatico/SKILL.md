@@ -2,8 +2,8 @@
 name: texto-didatico
 description: "Escrever texto didático narrativo na base Textos Didáticos do Notion, no formato e na voz autoral da série de Cabrobró do Oeste (modelo canônico: 'Necessidade, demanda e oferta em Saúde'). Cobre estrutura da página, arco narrativo, semântica dos callouts, verificação zero-trust das fontes, diagramas e mecânica de publicação no Notion."
 status: ativa
-version: 1.0
-date: 2026-08-12
+version: 1.1
+date: 2026-11-05
 evidence: Formato validado em três textos da série — Necessidade/demanda/oferta (2022, texto-fonte de Raphael), Suicídio e autolesão infanto-juvenil na APS (2026-08-11) e Acesso avançado na APS (2026-08-12).
 ---
 
@@ -39,11 +39,22 @@ O produto é uma página do Notion, não um arquivo local. A voz autoral é a de
    - `# N+3. Referências Bibliográficas` — ABNT, numeradas por ordem de aparição, com `[**Disponível aqui**](url)` apenas para URLs testadas.
    - `# N+4. Para saber mais` — leituras além do escopo + links para os textos anteriores da série.
    - Fecho em itálico: **nota metodológica** declarando como os números foram verificados e listando as ressalvas incorporadas ao corpo.
+3. **Modular a carga cognitiva** (pedido de Raphael na revisão do texto de acesso avançado, nov. 2026):
+   - Dentro de cada seção H1, **subtítulos H2** para cada bloco de ideia; quando a seção apresenta uma tipologia, **H2 para as categorias e H3 para os itens** (ex.: "Modelos que separam a demanda..." em H2; "Tradicional", "Carve-out" em H3).
+   - Parágrafos curtos, uma ideia por parágrafo. Enumerações de passos ou movimentos viram lista numerada com frases completas.
+   - Todo conceito-chave recém-apresentado ganha um **box de definição** (📖, ver callouts) logo depois do parágrafo que o introduz.
+   - Quadros comparativos da fonte (ex.: os quatro quadrantes de pressão assistencial × frequência) viram **tabela + box** com uma linha por categoria; tipologias com cinco ou mais itens ganham tabela-síntese.
 
 ## Universo narrativo (continuidade obrigatória)
 
 - Cenário fixo: **Cabrobró do Oeste**, cidade fictícia (~8 mil habitantes) do interior de Minas; leitores são "**você e sua dupla**" no **Internato Rural** (2ª pessoa do singular dirigida ao leitor + a dupla).
-- Personagens recorrentes (reutilizar antes de criar): o **secretário de saúde** recém-empossado e sem formação em saúde (texto 1); a **preceptora** que define o tema da semana e assume casos (textos 2 e 3); **Dona Marlene** (texto de referências/contrarreferências); **Larissa, 14 anos** (texto de suicídio); **seu Geraldo, 52 anos, pedreiro, hipertenso** (texto de acesso avançado). Novos personagens-paciente podem ser criados; ganham nome, idade, ofício e um detalhe humano.
+- **Supervisão no Internato Rural (desenho real; não inventar outro)**. Não existe "preceptora". Há dois papéis distintos:
+  - **Supervisor local**: o médico da equipe de Saúde da Família do município que supervisiona os alunos. É a referência para a **discussão clínica durante o atendimento** (conduta, retorno, exame, encaminhamento, limites do que o interno pode fazer). Na série, é o **Dr. Anselmo**, há três anos na mesma equipe da UBS de Cabrobró.
+  - **Professor**: docente da UFMG que supervisiona a dupla e **viaja ao município** para encontrá-la. É a referência para a **discussão de fluxos, APS e sistema de saúde**, propõe o tema da semana e conduz o grupo de discussão.
+  - Regra prática: pergunta que nasce dentro do consultório → supervisor local; pergunta sobre organização do serviço, política ou rede → professor. Os textos publicados até agosto de 2026 ainda usam "preceptora"; ao revisá-los, aplicar este desenho.
+- **Estrutura de Cabrobró** (manter coerência): UBS com duas equipes de Saúde da Família (a de seu Geraldo, com alta rotatividade de médicos, e a do Dr. Anselmo); **pronto atendimento no próprio município**; **não há UPA**, cujo porte não cabe numa cidade de ~8 mil habitantes; especialidades e maternidade por pactuação regional (Montes Claros, no texto de referências).
+- **Verossimilhança dos números do cenário**: os números de Cabrobró são fictícios, mas precisam caber num município de ~8 mil habitantes (ex.: espera de semanas, não de meses, para consulta agendada na UBS) e ser declarados como fictícios na nota metodológica.
+- Personagens recorrentes (reutilizar antes de criar): o **secretário de saúde** recém-empossado e sem formação em saúde (texto 1); o **Dr. Anselmo**, supervisor local; o **professor** da UFMG; **Dona Marlene** (texto de referências/contrarreferências); **Larissa, 14 anos** (texto de suicídio); **seu Geraldo, 52 anos, pedreiro, hipertenso** (texto de acesso avançado). Novos personagens-paciente podem ser criados; ganham nome, idade, ofício e um detalhe humano.
 - Arco temporal: a semana (segunda a sexta) até o **grupo de discussão**; cada seção avança um dia ou um turno.
 - **Amarração entre textos**: citar explicitamente conceitos e cenas dos textos anteriores com link Notion (ex.: demanda reprimida e o caso das tardes de pré-natal vazias, do texto 1). O leitor da série deve sentir um mundo só.
 
@@ -59,7 +70,8 @@ O produto é uma página do Notion, não um arquivo local. A voz autoral é a de
 
 | Callout | Uso |
 |---|---|
-| `<callout icon="💡" color="pink_bg">` | Conceito-chave para reter ("**Guarde este ponto.**", "**A síntese da semana.**") |
+| `<callout icon="📖" color="green_bg">` | Definição de um conceito que acabou de ser apresentado, para fixação: abre com o termo em negrito, uma ideia por box, com citação |
+| `<callout icon="💡" color="pink_bg">` | Síntese para reter ("**Guarde este ponto.**", "**A síntese da semana.**") |
 | `<callout icon="💬" color="orange_bg">` | Provocação para o grupo ("**Para discutir com o professor:**", "**Pergunta desconfortável para o grupo.**") |
 | `<callout icon="📅" color="yellow_bg">` | Validade temporal dos dados ("**Panorama verificado em <mês/ano>.**" + instrução de reverificação) |
 | `<callout icon="💡" color="blue_bg">` | Curiosidade ou caso real (institucional, histórico, UFMG) |
@@ -81,6 +93,8 @@ Tabela `<table header-row="true">` para síntese de evidência (pergunta → res
 - [ ] Arco narrativo fechado (cena de abertura → descobertas → contraditório → retorno ao caso).
 - [ ] Links para textos anteriores da série presentes; personagens/conceitos reutilizados.
 - [ ] Todos os `\[N\]` têm entrada na lista; toda URL da lista foi testada hoje.
+- [ ] Supervisão no desenho real: clínica com o supervisor local, sistema e grupo de discussão com o professor; nenhuma "preceptora".
+- [ ] Carga cognitiva: H2 por bloco de ideia, H3 para itens de tipologia, parágrafos curtos, box 📖 depois de cada conceito-chave novo.
 - [ ] Callouts seguem a semântica fixa; há pelo menos um 💬 provocativo e um 📅 de validade temporal quando há dados datados.
 - [ ] Releitura final caçando: travessões em excesso, exclamações vazias, jargão sem explicação, fio lógico solto entre seções.
 - [ ] `notion-fetch` de conferência da renderização.
