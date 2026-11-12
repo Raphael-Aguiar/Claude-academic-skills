@@ -72,7 +72,7 @@ O arquivo de texto canônico (ex.: `capitulo.md`) NÃO é criado aqui — nasce 
 - **Nome da pasta human-readable, com espaços** (ex.: `Artigo Telessaúde APS`) — nunca kebab-case nem snake_case (regra do vault para arquivos visíveis a Raphael).
 - **Não criar nada fora de `~/PKM/Escrita/`** — sem repo Git próprio (o vault já versiona), sem pastas em outros pontos do vault.
 - **Antes de criar, verificar se já existe** projeto com nome ou tema semelhante em `~/PKM/Escrita/` — se houver sobreposição, perguntar a Raphael em vez de criar duplicata.
-- **Registrar a criação no `~/Atlas/Sistema/log.md`**: `[YYYY-MM-DD HH:MM] CRIAR | projeto de escrita <Nome> (tipo, alvo, prazo) | ~/PKM/Escrita/<Nome>/`.
+- **Registrar a criação no `~/Wiki/Sistema/log.md`**: `[YYYY-MM-DD HH:MM] CRIAR | projeto de escrita <Nome> (tipo, alvo, prazo) | ~/PKM/Escrita/<Nome>/`.
 - Nenhuma propriedade de frontmatter, enum ou tag nova — usar apenas o padrão descrito aqui (autoria de schema é de Raphael).
 
 ## Após a criação
