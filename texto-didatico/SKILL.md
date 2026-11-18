@@ -1,28 +1,27 @@
 ---
 name: texto-didatico
-description: "Escrever texto didático narrativo na base Textos Didáticos do Notion, no formato e na voz autoral da série de Cabrobró do Oeste (modelo canônico: 'Necessidade, demanda e oferta em Saúde'). Cobre estrutura da página, arco narrativo, semântica dos callouts, verificação zero-trust das fontes, diagramas e mecânica de publicação no Notion."
+description: "Escrever texto didático narrativo como página do Memex (tipo Material didático), no formato e na voz autoral da série de Cabrobró do Oeste (modelo canônico: 'Necessidade, demanda e oferta em Saúde'). Cobre estrutura da página, arco narrativo, semântica dos callouts, verificação zero-trust das fontes, diagramas e publicação no Memex."
 status: ativa
 version: 1.1
 date: 2026-11-05
 evidence: Formato validado em três textos da série — Necessidade/demanda/oferta (2022, texto-fonte de Raphael), Suicídio e autolesão infanto-juvenil na APS (2026-08-11) e Acesso avançado na APS (2026-08-12).
 ---
 
-# Texto Didático — série narrativa da base Textos Didáticos (Notion)
+# Texto Didático — série narrativa (página do Memex, tipo Material didático)
 
 ## Propósito e gatilho
 
-Produzir textos didáticos para estudantes de medicina/saúde coletiva no formato consolidado da base **📚 Textos Didáticos** do Notion de Raphael. Usar esta skill SEMPRE que ele pedir "um texto na base de textos didáticos", "um texto no formato do de necessidades e demandas" ou "mais um texto da série".
+Produzir textos didáticos para estudantes de medicina/saúde coletiva no formato consolidado da série (antes na base Textos Didáticos do Notion). Usar esta skill SEMPRE que ele pedir "um texto na base de textos didáticos", "um texto no formato do de necessidades e demandas" ou "mais um texto da série".
 
-O produto é uma página do Notion, não um arquivo local. A voz autoral é a de Raphael (o texto sai assinado por ele); o rigor factual é o do sistema de escrita acadêmica (zero-trust).
+O produto é uma página do Memex (espaço PKM), não um arquivo local solto. A voz autoral é a de Raphael (o texto sai assinado por ele); o rigor factual é o do sistema de escrita acadêmica (zero-trust).
 
-## Onde publicar (mecânica Notion)
+## Onde publicar (Memex)
 
-- Base: database **Textos Didáticos** — `44a6eb06-b153-45c6-b959-e93c76ee935d`; data source `collection://7bcfaa56-c603-4865-93b1-619955c99562`.
-- Criar com `notion-create-pages` usando `parent: {type: "data_source_id", data_source_id: "7bcfaa56-c603-4865-93b1-619955c99562"}`.
-- Propriedades: `Nome` (título) e `Assunto` (select). **Usar somente valores existentes do enum** (hoje: "Políticas de Saúde", "Inteligência Artificial") — autoria de novos valores é exclusiva de Raphael (memória `feedback-autoria-nomenclatura-raphael`).
-- Ícone: um emoji temático por página (🧑🏾‍⚕️, 💛, 📅...).
-- Imagens: subir SVG por `notion-create-attachment` (campo `content`; SVG é texto) e referenciar `![legenda com FONTE](file-upload://<id>)`. Para binários, `notion-create-file-upload` + POST, ou `source_url` com URL assinada fresca (truque do banner: `notion-fetch` na página anterior renova a URL S3 por 300 s; anexar imediatamente).
-- Após criar, **fazer `notion-fetch` da página nova** para conferir renderização (colunas, callouts, tabela, imagens).
+Desde 12/11/2026 (material didático reutilizável vai para o Memex, a pedido de Raphael) o destino é uma **página do Memex, no espaço PKM, tipo Material didático**, com `autor: agente` quando escrita por agente, ligada à Área ou Frente que a usa. A base Textos Didáticos do Notion é arquivo (Notion deprecado para gestão). A voz autoral continua a de Raphael.
+
+- Criar a página pelo fluxo do Memex (`~/Wiki/Sistema/componentes/memex.md`), sem criar tipo, propriedade ou tag novos (autoria de Raphael).
+- Imagens e anexos binários ficam fora da VPS, por link (Drive).
+- Antes de 12/11/2026: base Textos Didáticos do Notion (`collection://7bcfaa56-c603-4865-93b1-619955c99562`, propriedades `Nome` e `Assunto`).
 
 ## Estrutura canônica da página
 
@@ -97,4 +96,4 @@ Tabela `<table header-row="true">` para síntese de evidência (pergunta → res
 - [ ] Carga cognitiva: H2 por bloco de ideia, H3 para itens de tipologia, parágrafos curtos, box 📖 depois de cada conceito-chave novo.
 - [ ] Callouts seguem a semântica fixa; há pelo menos um 💬 provocativo e um 📅 de validade temporal quando há dados datados.
 - [ ] Releitura final caçando: travessões em excesso, exclamações vazias, jargão sem explicação, fio lógico solto entre seções.
-- [ ] `notion-fetch` de conferência da renderização.
+- [ ] Conferir a página do Memex renderizada.
