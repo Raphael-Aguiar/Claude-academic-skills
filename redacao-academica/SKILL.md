@@ -1,6 +1,6 @@
 ---
 name: redacao-academica
-description: "Princípios de redação acadêmica didática. Ler antes de redigir qualquer seção de texto, em qualquer projeto de ~/PKM/Escrita/. Complementa (nunca substitui) o SKILL.md do projeto."
+description: "Princípios de redação acadêmica didática. Ler antes de redigir qualquer seção de texto, em qualquer projeto de ~/.local/state/escrita-tooling/projetos/. Complementa (nunca substitui) o SKILL.md do projeto."
 status: ativa
 version: 1.0
 date: 2026-07-10

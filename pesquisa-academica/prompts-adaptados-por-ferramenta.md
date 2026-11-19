@@ -316,7 +316,7 @@ Realizei uma auditoria de 251 referências produzidas por 4 ferramentas de IA. R
 
 **Meu ambiente:**
 - Linux Mint 22
-- Obsidian (vault em ~/PKM/Escrita/, versionado com Git)
+- Obsidian (vault em ~/.local/state/escrita-tooling/projetos/, versionado com Git)
 - Python 3.x disponível
 - Claude (API + Desktop com MCP filesystem), ChatGPT Plus, Perplexity Pro, Gemini Advanced, scite.ai
 - Acesso Portal CAPES

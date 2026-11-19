@@ -19,7 +19,7 @@ Pandoc é a ferramenta central (`pandoc --version` antes de começar).
 ### Markdown → DOCX (caso mais comum: editoras)
 
 ```bash
-cd ~/PKM/Escrita/<Projeto>/
+cd ~/.local/state/escrita-tooling/projetos/<Projeto>/
 pandoc capitulo.md -o entrega/capitulo.docx \
   --reference-doc=template-editora.docx \
   --citeproc --bibliography=pipeline/refs.bib --csl=vancouver.csl \
@@ -66,5 +66,5 @@ Sobre o arquivo **gerado** (abrir o docx/PDF, não só o markdown), item a item,
 
 ## Saída
 
-- Arquivos gerados vão na subpasta `entrega/` dentro de `~/PKM/Escrita/<Projeto>/` — nunca fora dela.
+- Arquivos gerados vão na subpasta `entrega/` dentro de `~/.local/state/escrita-tooling/projetos/<Projeto>/` — nunca fora dela.
 - O markdown permanece o canônico: correções pós-conversão são feitas no `.md` e o documento é regenerado, nunca editado só no docx.

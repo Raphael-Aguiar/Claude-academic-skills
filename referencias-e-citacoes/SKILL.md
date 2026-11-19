@@ -82,7 +82,7 @@ Referências sugeridas por modelos de linguagem (Perplexity, scite.ai, ChatGPT, 
 | ChatGPT | 0% | 0% (inverificável) | Alto |
 | Claude | 8% | 97% (verificável) | Médio-baixo |
 
-→ Relatório completo: `~/PKM/Escrita/Livro Editora Atheneu/Deep Researches (Antigas)/relatorio-audit-deep-research.md`
+→ Relatório completo: `~/.local/state/escrita-tooling/projetos/Livro Editora Atheneu/Deep Researches (Antigas)/relatorio-audit-deep-research.md`
 → Pipeline recomendado: `~/bin/escrita-tooling/skills/revisao-literatura/SKILL.md`
 
 ### 3.3 Protocolo de prevenção (integrado ao workflow de escrita)
@@ -219,7 +219,7 @@ O pipeline gera `refs.bib` automaticamente na etapa 9 (`s09_synthesize.py`). Cad
 ```bash
 # Gerar .bib do projeto
 python -m tools export "Projeto" --format bib
-# Output: ~/PKM/Escrita/Projeto/pipeline/refs.bib
+# Output: ~/.local/state/escrita-tooling/projetos/Projeto/pipeline/refs.bib
 ```
 
 ### Uso com Pandoc + CSL
@@ -354,5 +354,5 @@ Quando lançar subagentes para tarefas de extração exaustiva, a instrução "e
   - 1 referência inválida (possível alucinação de IA) — removida/substituída
   - 1 URL quebrada (site governamental) — corrigida
   - 1 dado sem fonte adequada ("80% não estruturados") — fonte complementar adicionada
-  - Relatório completo: `~/PKM/Escrita/Livro Editora Atheneu/Deep Researches (Antigas)/relatorio-auditoria-referencias.md`
+  - Relatório completo: `~/.local/state/escrita-tooling/projetos/Livro Editora Atheneu/Deep Researches (Antigas)/relatorio-auditoria-referencias.md`
 - **Lição aprendida:** Referências de modelos de linguagem devem ser verificadas individualmente. O Deep Research do scite.ai produziu referências tangenciais de baixa utilidade.

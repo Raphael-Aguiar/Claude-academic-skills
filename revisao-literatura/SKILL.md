@@ -5,7 +5,7 @@ status: ativa
 version: 2.0
 criada: 2026-02-18
 atualizada: 2026-02-18
-baseda-em: ~/PKM/Escrita/Livro Editora Atheneu/Deep Researches (Antigas)/relatorio-audit-deep-research.md
+baseda-em: ~/.local/state/escrita-tooling/projetos/Livro Editora Atheneu/Deep Researches (Antigas)/relatorio-audit-deep-research.md
 ---
 
 # Revisão de Literatura — Pipeline Validado
@@ -26,7 +26,7 @@ Conduzir revisão de literatura como **produto final** (o artigo de revisão É 
 - **Usar esta skill** quando a revisão é o produto: artigo de revisão, TCC/dissertação/tese.
 - **Usar `pesquisa-academica`** quando a revisão é intermediária (capítulo, artigo original, material didático).
 
-**Fundamentação metodológica:** `~/PKM/Escrita/Pesquisas sobre Pipeline/revisao-metodologica-tipos-de-revisao.md`
+**Fundamentação metodológica:** `~/.local/state/escrita-tooling/projetos/Pesquisas sobre Pipeline/revisao-metodologica-tipos-de-revisao.md`
 
 ## Pipeline automatizado
 
@@ -69,7 +69,7 @@ Ao triar referências (inclusive as sugeridas por IA), pontuar por aderência ao
 
 ## Ferramentas de IA — risco empírico (auditoria de 288 refs, 2026-02-18)
 
-Relatório completo: `~/PKM/Escrita/Livro Editora Atheneu/Deep Researches (Antigas)/relatorio-audit-deep-research.md`.
+Relatório completo: `~/.local/state/escrita-tooling/projetos/Livro Editora Atheneu/Deep Researches (Antigas)/relatorio-audit-deep-research.md`.
 
 | Ferramenta | Melhor uso | Pior uso | Risco |
 |---|---|---|---|
@@ -91,6 +91,6 @@ A verificação individual antes de inserir (DOI resolve, autores conferem, cont
 
 ## Referências desta skill
 
-- Auditoria: `~/PKM/Escrita/Livro Editora Atheneu/Deep Researches (Antigas)/relatorio-audit-deep-research.md`
+- Auditoria: `~/.local/state/escrita-tooling/projetos/Livro Editora Atheneu/Deep Researches (Antigas)/relatorio-audit-deep-research.md`
 - Skill complementar: `~/bin/escrita-tooling/skills/referencias-e-citacoes/SKILL.md`
 - Verificação de referências no pipeline: `python -m tools verify` / `verify-refs` (ver `tools/DECISOES.md` T1/T8).

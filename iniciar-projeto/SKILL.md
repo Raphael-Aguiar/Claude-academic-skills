@@ -1,6 +1,6 @@
 ---
 name: iniciar-projeto
-description: "Skill geradora — cria um novo projeto de escrita em ~/PKM/Escrita/ (SKILL.md do projeto, scope.yaml, notas_pesquisa.md) a partir de um questionário conduzido com Raphael, uma pergunta por vez."
+description: "Skill geradora — cria um novo projeto de escrita em ~/.local/state/escrita-tooling/projetos/ (material enviado ao Drive do projeto; texto na Oficina) (SKILL.md do projeto, scope.yaml, notas_pesquisa.md) a partir de um questionário conduzido com Raphael, uma pergunta por vez."
 status: ativa
 version: 1.0
 date: 2026-07-10
@@ -10,7 +10,7 @@ date: 2026-07-10
 
 ## Propósito
 
-Configurar um novo projeto de escrita sem montagem manual. Conduz um questionário com Raphael e gera a estrutura mínima do projeto, com o SKILL.md específico modelado no do caso Atheneu (`~/PKM/Escrita/Livro Editora Atheneu/SKILL.md` — ler como referência antes de gerar).
+Configurar um novo projeto de escrita sem montagem manual. Conduz um questionário com Raphael e gera a estrutura mínima do projeto, com o SKILL.md específico modelado no do caso Atheneu (`~/.local/state/escrita-tooling/projetos/ (material enviado ao Drive do projeto; texto na Oficina)Livro Editora Atheneu/SKILL.md` — ler como referência antes de gerar).
 
 ## Questionário — UMA pergunta por vez
 
@@ -50,7 +50,7 @@ Revisões usam a skill `revisao-literatura` (a revisão É o produto); os demais
 Criar a pasta e três arquivos:
 
 ```
-~/PKM/Escrita/<Nome Natural do Projeto>/
+~/.local/state/escrita-tooling/projetos/<Nome Natural do Projeto>/
 ├── SKILL.md            ← regras do projeto (modelo abaixo)
 ├── scope.yaml          ← via pipeline (comando abaixo)
 └── notas_pesquisa.md   ← vazio, só com cabeçalho
@@ -70,9 +70,9 @@ O arquivo de texto canônico (ex.: `capitulo.md`) NÃO é criado aqui — nasce 
 ## Regras invioláveis
 
 - **Nome da pasta human-readable, com espaços** (ex.: `Artigo Telessaúde APS`) — nunca kebab-case nem snake_case (regra do vault para arquivos visíveis a Raphael).
-- **Não criar nada fora de `~/PKM/Escrita/`** — sem repo Git próprio (o vault já versiona), sem pastas em outros pontos do vault.
-- **Antes de criar, verificar se já existe** projeto com nome ou tema semelhante em `~/PKM/Escrita/` — se houver sobreposição, perguntar a Raphael em vez de criar duplicata.
-- **Registrar a criação no `~/Wiki/Sistema/log.md`**: `[YYYY-MM-DD HH:MM] CRIAR | projeto de escrita <Nome> (tipo, alvo, prazo) | ~/PKM/Escrita/<Nome>/`.
+- **Pasta de trabalho só em `~/.local/state/escrita-tooling/projetos/`** e, no Drive do projeto, uma subpasta "Material de trabalho" (procurar antes de criar), com o ID acrescentado em `tools/projetos_drive.json`; ao fim, `python -m tools enviar "<Nome>"`. O texto em produção nasce na Oficina (`Wiki/Memex/Oficina/<Nome>/`, na VPS), pela regra de Raphael de 19/11/2026: a Oficina é lugar de produzir o texto, não de guardar. Sem repo Git próprio.
+- **Antes de criar, verificar se já existe** projeto com nome ou tema semelhante na Oficina, em `tools/projetos_drive.json` ou no Drive — se houver sobreposição, perguntar a Raphael em vez de criar duplicata.
+- **Registrar a criação no `~/Wiki/Sistema/log.md`**: `[YYYY-MM-DD HH:MM] CRIAR | projeto de escrita <Nome> (tipo, alvo, prazo) | pasta de trabalho e Drive do projeto`.
 - Nenhuma propriedade de frontmatter, enum ou tag nova — usar apenas o padrão descrito aqui (autoria de schema é de Raphael).
 
 ## Após a criação
