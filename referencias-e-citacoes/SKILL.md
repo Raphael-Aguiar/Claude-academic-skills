@@ -198,7 +198,7 @@ Skill completa: `~/bin/escrita-tooling/skills/pesquisa-academica/extract-facts.m
 
 ## 5. Formato de armazenamento — .bib + Pandoc (caminho antigo, superado em 12/11/2026)
 
-> **Atualização de 12/11/2026 (decisão de Raphael):** a base de referências é o Memex (uma página por referência no espaço PKM), que substitui o Zotero como base; as 184 referências existentes migram para lá sem quebrar o escrita-tooling (decisão de 17/11/2026). O Zotero fica só para a citação automática no Word e no Google Docs, alimentado pelo Memex em mão única, sem marcas no texto; a formatação sai pelo citeproc. O arquivo `.bib`, as chaves de citação no Obsidian e a conversão pelo Pandoc descritos abaixo são o caminho antigo.
+> **Atualização de 12/11/2026 (decisão de Raphael):** a base de referências é o Memex (uma página por referência no Memex), que substitui o Zotero como base; as 184 referências existentes migram para lá sem quebrar o escrita-tooling (decisão de 17/11/2026). O Zotero fica só para a citação automática no Word e no Google Docs, alimentado pelo Memex em mão única, sem marcas no texto; a formatação sai pelo citeproc. O arquivo `.bib`, as chaves de citação no Obsidian e a conversão pelo Pandoc descritos abaixo são o caminho antigo.
 
 ### Decisão (2026-02-18)
 

@@ -13,11 +13,11 @@ evidence: Formato validado em três textos da série — Necessidade/demanda/ofe
 
 Produzir textos didáticos para estudantes de medicina/saúde coletiva no formato consolidado da série (antes na base Textos Didáticos do Notion). Usar esta skill SEMPRE que ele pedir "um texto na base de textos didáticos", "um texto no formato do de necessidades e demandas" ou "mais um texto da série".
 
-O produto é uma página do Memex (espaço PKM), não um arquivo local solto. A voz autoral é a de Raphael (o texto sai assinado por ele); o rigor factual é o do sistema de escrita acadêmica (zero-trust).
+O produto é uma página do Memex (Memex), não um arquivo local solto. A voz autoral é a de Raphael (o texto sai assinado por ele); o rigor factual é o do sistema de escrita acadêmica (zero-trust).
 
 ## Onde publicar (Memex)
 
-Desde 12/11/2026 (material didático reutilizável vai para o Memex, a pedido de Raphael) o destino é uma **página do Memex, no espaço PKM, tipo Material didático**, com `autor: agente` quando escrita por agente, ligada à Área ou Frente que a usa. A base Textos Didáticos do Notion é arquivo (Notion deprecado para gestão). A voz autoral continua a de Raphael.
+Desde 12/11/2026 (material didático reutilizável vai para o Memex, a pedido de Raphael) o destino é uma **página do Memex, no Memex, tipo Material didático**, com `autor: agente` quando escrita por agente, ligada à Área ou Frente que a usa. A base Textos Didáticos do Notion é arquivo (Notion deprecado para gestão). A voz autoral continua a de Raphael.
 
 - Criar a página pelo fluxo do Memex (`~/Wiki/Sistema/componentes/memex.md`), sem criar tipo, propriedade ou tag novos (autoria de Raphael).
 - Imagens e anexos binários ficam fora da VPS, por link (Drive).
