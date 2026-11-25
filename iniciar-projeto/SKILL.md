@@ -70,7 +70,7 @@ O arquivo de texto canônico (ex.: `capitulo.md`) NÃO é criado aqui — nasce 
 ## Regras invioláveis
 
 - **Nome da pasta human-readable, com espaços** (ex.: `Artigo Telessaúde APS`) — nunca kebab-case nem snake_case (regra do vault para arquivos visíveis a Raphael).
-- **Pasta de trabalho só em `~/.local/state/escrita-tooling/projetos/`** e, no Drive do projeto, uma subpasta "Material de trabalho" (procurar antes de criar), com o ID acrescentado em `tools/projetos_drive.json`; ao fim, `python -m tools enviar "<Nome>"`. O texto em produção nasce na Oficina (`Wiki/Memex/Oficina/<Nome>/`, na VPS), pela regra de Raphael de 19/11/2026: a Oficina é lugar de produzir o texto, não de guardar. Sem repo Git próprio.
+- **Pasta de trabalho só em `~/.local/state/escrita-tooling/projetos/`** e, no Drive do projeto, uma subpasta "Material de trabalho" (procurar antes de criar), com o ID acrescentado em `tools/projetos_drive.json`; ao fim, `python -m tools enviar "<Nome>"`. O texto em produção nasce na Oficina (`Wiki/Oficina/<Nome>/`, na VPS), pela regra de Raphael de 19/11/2026: a Oficina é lugar de produzir o texto, não de guardar. Sem repo Git próprio.
 - **Antes de criar, verificar se já existe** projeto com nome ou tema semelhante na Oficina, em `tools/projetos_drive.json` ou no Drive — se houver sobreposição, perguntar a Raphael em vez de criar duplicata.
 - **Registrar a criação no `~/Wiki/Sistema/log.md`**: `[YYYY-MM-DD HH:MM] CRIAR | projeto de escrita <Nome> (tipo, alvo, prazo) | pasta de trabalho e Drive do projeto`.
 - Nenhuma propriedade de frontmatter, enum ou tag nova — usar apenas o padrão descrito aqui (autoria de schema é de Raphael).
